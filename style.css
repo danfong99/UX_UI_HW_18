@@ -1,0 +1,170 @@
+body {
+    font-family: 'DM Sans', sans-serif;
+    background-color: rgb(17, 17, 17);
+    margin-left: 15%;
+    margin-right: 15%;
+    margin-top: 2em;
+    color: white;
+}
+
+h1 {
+    color: white;
+    font-size: 3em;
+    font-weight: 600;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    color: #000000;
+    font-weight: bold;
+    font-size: 24px;
+    text-decoration: none;
+}
+
+.nav-links {
+    display: flex;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    background: linear-gradient(to left, rgba(55, 55, 55, 0.1), rgba(177, 177, 177, 0.15));
+    border-radius: 16px;
+    padding: 24px 16px;
+    justify-content: space-between;
+    backdrop-filter: blur(10px);
+}
+
+.nav-item {
+    margin-left: 16px;
+    margin-right: 16px;
+}
+
+.nav-item a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.nav-item a:hover {
+    background-color: rgba(255, 255, 255, 0.3); 
+}
+
+.logo {
+    width: 6rem;
+    height: auto;
+}
+
+.hero {
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+}
+
+/* Links and Buttons States */
+
+.primary-button {
+    display: inline-block;
+    background-color: white;
+    color: black;
+    border-radius: 0.7rem;
+      padding: 1.5rem 1.232rem;
+    transition: background-color 0.3s ease-in-out;
+    font-weight: medium;
+    
+}
+
+.primary-button:hover {
+    background-color: #E05BF3;
+    color: black;
+    cursor: pointer;
+         }
+
+.secondary-button {
+    display: inline-block;
+    border: 1.5px solid #a0a0a0;
+    border-radius: 0.7rem;
+  	padding: .815rem 1.232rem;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.secondary-button:hover {
+    background-color: #E05BF3;
+    color: black;
+    cursor: pointer;
+    border: 1.5px solid rgba(17, 17, 17, 0);
+}
+
+a {
+    background-position-y: -0%;
+background-image: linear-gradient(180deg, transparent 50%, #fff 50%);
+transition: all 0.1s ease;
+background-size: 2px;
+background-size: auto 190%;
+padding: 3px 0;
+text-decoration: none;
+color: inherit;
+line-height: 1.5rem;
+}
+
+a:hover {
+background-position-y: 100%;
+color: #000;
+transition: all 0.1s ease;
+}
+
+/* Case Study Cards */
+
+.P-Card {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: 
+    'CS-Img CS-Copy';
+    background: linear-gradient(to top left, rgba(86, 86, 86, 1), rgba(17, 17, 17, 1));
+    border-radius: 16px;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.CS-Copy {
+    grid-area: CS-Copy;
+    padding-left: 4rem;
+    padding-right: 4rem;
+}
+
+.CS-Img {
+    grid-area: CS-Img;
+    padding-left: 4rem;
+    padding-right: 4rem;
+    
+}
+
+.CS-Img img {
+    width: auto;
+    height: 300px;
+}
+
+footer {
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: 
+    'Contact Info Socials';
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+}
+
+
+.Contact {
+    grid-area: Contact;
+}
+
+.Info {
+    grid-area: Info;
+}
+
+.Socials {
+    grid-area: Socials;
+}
