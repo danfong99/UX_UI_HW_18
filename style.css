@@ -9,8 +9,14 @@ body {
 
 h1 {
     color: white;
-    font-size: 3em;
+    font-size: 3rem;
     font-weight: 600;
+}
+
+h2 {
+    color: white;
+    font-size: 2rem;
+    font-weight: 400;
 }
 
 .navbar {
@@ -89,6 +95,9 @@ h1 {
     border-radius: 0.7rem;
   	padding: .815rem 1.232rem;
     transition: background-color 0.3s ease-in-out;
+    max-width: 8rem;
+    text-align: center;
+    
 }
 
 .secondary-button:hover {
@@ -116,6 +125,38 @@ color: #000;
 transition: all 0.1s ease;
 }
 
+/* Specialties */
+
+.specialties {
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas:
+    'S-Header S-Header S-Header'
+    'Wireframing Research VDesign';
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+    column-gap: 1rem;
+}
+
+.S-Header {
+    grid-area: S-Header;
+}
+
+.Wireframing {
+    grid-area: Wireframing;
+    
+}
+
+.Wireframing {
+    grid-area: Research;
+    
+}
+
+.Wireframing {
+    grid-area: VDesign;
+    
+}
+
 /* Case Study Cards */
 
 .P-Card {
@@ -127,31 +168,43 @@ transition: all 0.1s ease;
     border-radius: 16px;
     align-items: center;
     margin-bottom: 2rem;
+    padding-top: 4rem;
+    padding-bottom: 4rem;
 }
 
 .CS-Copy {
     grid-area: CS-Copy;
     padding-left: 4rem;
     padding-right: 4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .CS-Img {
     grid-area: CS-Img;
-    padding-left: 4rem;
-    padding-right: 4rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     
 }
 
 .CS-Img img {
-    width: auto;
-    height: 300px;
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    height: auto;
 }
+
+/*Footer*/
 
 footer {
     display:grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-areas: 
-    'Contact Info Socials';
+    'Contact Contact Info Socials';
     margin-top: 4rem;
     margin-bottom: 4rem;
 }
@@ -167,4 +220,46 @@ footer {
 
 .Socials {
     grid-area: Socials;
+}
+
+@media only screen and (max-width: 600px) {
+    .specialties {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+        'S-Header'
+        'Wireframing'
+        'Research'
+        'VDesign';
+    }
+
+    .P-Card {
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+        'CS-Img'
+        'CS-Copy';
+    }
+
+    footer {
+        display:grid;
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+        'Contact'
+        'Info' 
+        'Socials';
+        margin-top: 4rem;
+        margin-bottom: 4rem;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    .CS-Copy {
+        grid-area: CS-Copy;
+        padding-left: 1rem;
+        padding-right: 1rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
 }
